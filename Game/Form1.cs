@@ -21,6 +21,7 @@ namespace Game
         {
             InitializeComponent();
             la.Visible = false;
+            hiden.Visible = false;
             Wygrana();
         }
 
@@ -60,6 +61,7 @@ namespace Game
         private void Wygrana()
         {
             nrmapy++;
+            
             switch (nrmapy)
             {
                 case 1:
@@ -77,10 +79,12 @@ namespace Game
                 case 3:
                     game_board1.Image = Game.Properties.Resources.lvl3;
                     la.Visible = true;
+                    hiden.Visible = true;
                     StartPoint = game_board1.Location;
                     StartPoint.Offset(254, 468);
                     StartMouse();
                     break;
+                    
             }
         }
 
@@ -102,5 +106,19 @@ namespace Game
                 LastWin();
             }
         }
+
+        private void hiden_MouseEnter(object sender, EventArgs e)
+        {
+            if (isGame)
+            {
+                game_board1.Image = Game.Properties.Resources.nice;
+                hiden.Visible = false;
+                StartPoint = game_board1.Location;
+                StartPoint.Offset(18, 14);
+                StartMouse();
+            }
+        }
+
+        
     }
 }
