@@ -95,7 +95,7 @@
     <None Include="Resources\lvl3.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\sound.wav" />
+    <None Include="Resources\sound1.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

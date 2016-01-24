@@ -15,16 +15,13 @@ namespace Game
     {
         private Point StartPoint;
         private bool isGame = true;
-        int nrmapy = 1;
+        int nrmapy = 0;
         int cos = 15;
         public Form1()
         {
             InitializeComponent();
             la.Visible = false;
-            game_board1.Image = Game.Properties.Resources.lvl1;
-            StartPoint = game_board1.Location;
-            StartPoint.Offset(200, 23);
-            StartMouse();
+            Wygrana();
         }
 
         private void StartMouse()
@@ -65,6 +62,12 @@ namespace Game
             nrmapy++;
             switch (nrmapy)
             {
+                case 1:
+                    game_board1.Image = Game.Properties.Resources.lvl1;
+                    StartPoint = game_board1.Location;
+                    StartPoint.Offset(200, 23);
+                    StartMouse();
+                    break;
                 case 2:
                     game_board1.Image = Game.Properties.Resources.lvl2;
                     StartPoint = game_board1.Location;
@@ -86,7 +89,7 @@ namespace Game
             isGame = false;
             game_board1.SizeMode = PictureBoxSizeMode.StretchImage;
             game_board1.Image = Game.Properties.Resources.scary_maze_game_tribute;
-            SoundPlayer sp = new SoundPlayer(Game.Properties.Resources.sound);
+            SoundPlayer sp = new SoundPlayer(Game.Properties.Resources.sound1);
             sp.Play();
 
         }
