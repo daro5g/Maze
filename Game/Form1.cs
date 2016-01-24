@@ -27,21 +27,9 @@ namespace Game
             StartMouse();
         }
 
-        private void finish_MouseEnter(object sender, EventArgs e)
-        {
-            MessageBox.Show("Well Done");
-            Close();
-        }
-
         private void StartMouse()
         {
             Cursor.Position = PointToScreen(StartPoint);
-        }
-
-
-        private void label2_MouseEnter(object sender, EventArgs e)
-        {
-            StartMouse();
         }
 
         private void game_board1_MouseMove(object sender, MouseEventArgs e)
