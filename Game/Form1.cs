@@ -102,6 +102,7 @@ namespace Game
         {
             if (isGame)
             {
+                hiden.Visible = false;
                 la.Visible = false;
                 LastWin();
             }
